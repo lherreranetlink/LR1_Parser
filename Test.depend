@@ -160,7 +160,7 @@
 	<string.h>
 	<ctype.h>
 
-1523316548 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.c
+1524930134 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.c
 	"lex.h"
 
 1523128382 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/main.c
@@ -168,19 +168,28 @@
 	<stdlib.h>
 	"parser.h"
 
-1524930890 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
+1524935501 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
+	<string.h>
 	"grammar.h"
 	"lex.h"
 	"token.h"
 	"stack.h"
+	"rules.h"
 
-1523214855 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.h
+1524932318 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.h
 	<stdio.h>
 	<stdlib.h>
+	"rules.h"
 
-1523214964 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.c
+1524934640 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.c
 	"stack.h"
 
 1523208368 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stringutils.c
 	"stringutils.h"
+
+1524934587 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/rules.h
+	"token.h"
+
+1524934535 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.c
+	"parser.h"
 

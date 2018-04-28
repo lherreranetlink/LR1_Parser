@@ -14,7 +14,7 @@ typedef struct FunctionDefinition
 {
     Token* dataType;
     Token* identifier;
-    Param* paramList;
+    FunctionParam* paramList;
 } FunctionDefinition;
 
 typedef struct VariableDefinition

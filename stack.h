@@ -2,18 +2,19 @@
 #define STACK_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
+#include "rules.h"
 
 typedef struct StackNode
 {
-    int data;
+    GenericSyntaxTreeNode* data;
     struct StackNode* next;
     struct StackNode* prev;
 
 } StackNode;
 
-int gettop(StackNode** top);
-void push(StackNode** top, int data);
-int pop(StackNode** top);
+GenericSyntaxTreeNode* gettop(StackNode** top);
+void push(StackNode** top, GenericSyntaxTreeNode* data);
+GenericSyntaxTreeNode* pop(StackNode** top);
 void printStack(StackNode** top);
 
 

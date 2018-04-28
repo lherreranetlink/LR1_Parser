@@ -1,0 +1,15 @@
+int main()
+{
+	return 1;
+}
+
+int b(int a, int b)
+{
+
+}
+
+int c(){
+	int a, b, c;
+ 	a = a + b;
+}
+

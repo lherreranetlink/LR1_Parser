@@ -1,0 +1,186 @@
+# depslib dependency file v1.0
+1523144934 source:/home/leonardoho/Escritorio/Test/fileutils.c
+	"fileutils.h"
+
+1523133931 /home/leonardoho/Escritorio/Test/fileutils.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1523221264 source:/home/leonardoho/Escritorio/Test/lex.c
+	"lex.h"
+
+1523221075 /home/leonardoho/Escritorio/Test/lex.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"token.h"
+
+1523128382 source:/home/leonardoho/Escritorio/Test/main.c
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+
+1523218289 /home/leonardoho/Escritorio/Test/parser.h
+	"grammar.h"
+	"lex.h"
+	"token.h"
+	"stack.h"
+
+1523215132 /home/leonardoho/Escritorio/Test/grammar.h
+	<stdio.h>
+	<string.h>
+	"token.h"
+	"lex.h"
+	"fileutils.h"
+	"stringutils.h"
+
+1523166357 /home/leonardoho/Escritorio/Test/token.h
+
+1523226328 source:/home/leonardoho/Escritorio/Test/parser.c
+	"parser.h"
+
+1523126727 source:/home/leonardoho/Escritorio/Test/token.c
+
+1523220069 source:/home/leonardoho/Escritorio/Test/grammar.c
+	"grammar.h"
+
+1523208368 source:/home/leonardoho/Escritorio/Test/stringutils.c
+	"stringutils.h"
+
+1523140789 /home/leonardoho/Escritorio/Test/stringutils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1523214855 /home/leonardoho/Escritorio/Test/stack.h
+	<stdio.h>
+	<stdlib.h>
+
+1523214964 source:/home/leonardoho/Escritorio/Test/stack.c
+	"stack.h"
+
+1523144934 source:/home/leonardoho/Escritorio/C-Parser/fileutils.c
+	"fileutils.h"
+
+1523133931 /home/leonardoho/Escritorio/C-Parser/fileutils.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1523293291 source:/home/leonardoho/Escritorio/C-Parser/grammar.c
+	"grammar.h"
+
+1523215132 /home/leonardoho/Escritorio/C-Parser/grammar.h
+	<stdio.h>
+	<string.h>
+	"token.h"
+	"lex.h"
+	"fileutils.h"
+	"stringutils.h"
+
+1523166357 /home/leonardoho/Escritorio/C-Parser/token.h
+
+1523221075 /home/leonardoho/Escritorio/C-Parser/lex.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"token.h"
+
+1523140789 /home/leonardoho/Escritorio/C-Parser/stringutils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1523316548 source:/home/leonardoho/Escritorio/C-Parser/lex.c
+	"lex.h"
+
+1523128382 source:/home/leonardoho/Escritorio/C-Parser/main.c
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+
+1523218289 /home/leonardoho/Escritorio/C-Parser/parser.h
+	"grammar.h"
+	"lex.h"
+	"token.h"
+	"stack.h"
+
+1523214855 /home/leonardoho/Escritorio/C-Parser/stack.h
+	<stdio.h>
+	<stdlib.h>
+
+1523294002 source:/home/leonardoho/Escritorio/C-Parser/parser.c
+	"parser.h"
+
+1523214964 source:/home/leonardoho/Escritorio/C-Parser/stack.c
+	"stack.h"
+
+1523208368 source:/home/leonardoho/Escritorio/C-Parser/stringutils.c
+	"stringutils.h"
+
+1523144934 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/fileutils.c
+	"fileutils.h"
+
+1523133931 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/fileutils.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1523293291 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/grammar.c
+	"grammar.h"
+
+1523215132 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/grammar.h
+	<stdio.h>
+	<string.h>
+	"token.h"
+	"lex.h"
+	"fileutils.h"
+	"stringutils.h"
+
+1524930147 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/token.h
+
+1523221075 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"token.h"
+
+1523140789 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stringutils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1523316548 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.c
+	"lex.h"
+
+1523128382 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/main.c
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+
+1524930890 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
+	"grammar.h"
+	"lex.h"
+	"token.h"
+	"stack.h"
+
+1523214855 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.h
+	<stdio.h>
+	<stdlib.h>
+
+1523214964 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.c
+	"stack.h"
+
+1523208368 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stringutils.c
+	"stringutils.h"
+

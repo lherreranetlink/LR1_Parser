@@ -12,6 +12,7 @@ void fileNotFoundError();
 void initializeStack();
 int getNextSymbolType(FILE* fd);
 void pushTokenIntoStack(Token* token, int goToState);
+void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parserTable[rows][columns]);
 void syntaxError();
 
 #endif // PARSER_H_INCLUDED

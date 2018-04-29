@@ -50,6 +50,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="parser.h" />
+		<Unit filename="rules.h" />
 		<Unit filename="stack.c">
 			<Option compilerVar="CC" />
 		</Unit>

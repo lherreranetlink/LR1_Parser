@@ -9,15 +9,23 @@ int main(int a, int b) {
 	while (token != 4) {
 		c = 4;
 	}
+	int b, c, d;
 
-	return a;
-	functionTest(4, 3, argTest);
+	functionTest(a, b);
+
+	return a + b;
 }
 
-int functionTest()
+int functionTest(int a, int b)
 {
+	int a, b, c;
 	a = 4 * 4 * 2 + 4 + 5;
-	return a;
+
+	if (a > 0)
+	{
+		b = 9;
+	}
+
 }
 
 int w, x, t, y;

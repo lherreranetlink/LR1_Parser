@@ -24,7 +24,25 @@ void printDefinition(GenericSyntaxTreeNode* definition);
 void printVarDefinition(DefVar* defVar);
 void printFunctionDefinition(DefFunc* defFunc);
 void printVarList(VarList* varList);
-void printParams();
-void printfFunctionBlok();
+void printParams(Params* params);
+void printfFunctionBlok(FuncBlock* funcBlock);
+void printParamList(ParamList* paramList);
+void printLocalDefinitions(LocalVarsDef* localVarsDef);
+void printLocalVarsAndStatements(GenericSyntaxTreeNode* localDefinition);
+void printSingleStatement(GenericSyntaxTreeNode* singleStm);
+void printAssignmentStatement(Statement* assignmentStm);
+void printIfStatement(Statement_1* ifStm);
+void printWhileStatement(Statement_2* whileStm);
+void printReturnStatement(Statement_3* returnStm);
+void printFunctionCallStatement(Statement_4* funcCallStm);
+void printExpression(GenericSyntaxTreeNode* expression);
+void printTerm(GenericSyntaxTreeNode* term);
+void printBlockStatement(GenericSyntaxTreeNode* blockStm);
+void printMultipleStatements(Statements* multipleStm);
+void printBlock(Block* block);
+void printMultipleStatements(Statements* multipleStm);
+void printElsePart(ElsePart* elsePart);
+void printFunctionCallArgs(Args* args);
+void printFunctionCallArgList(ArgList* argList);
 
 #endif // PARSER_H_INCLUDED

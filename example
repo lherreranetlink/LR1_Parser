@@ -1,15 +1,20 @@
-int main()
+int a, b;
+float c, d;
+
+int main(int a, int b) {
+	if (a == 3) {
+		b = 4.5;
+		c = 4.1;
+	}
+	while (token == 4) {
+		c = 4;
+	}
+
+	return a;
+}
+
+int functionTest()
 {
-	return 1;
+	a = 4 * 4 * 2 + 4 + 5;
+	return a;
 }
-
-int b(int a, int b)
-{
-
-}
-
-int c(){
-	int a, b, c;
- 	a = a + b;
-}
-

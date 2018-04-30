@@ -7,6 +7,9 @@
 #include "stack.h"
 #include "rules.h"
 
+#define CONTINUE_PARSE 0
+#define PARSE_FINISH 1
+
 void parse(FILE* fd);
 void fileNotFoundError();
 void initializeStack();

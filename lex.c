@@ -69,7 +69,6 @@ Token* getTokenFromFile(FILE* fileToAnalyze)
                 currentState = (currentState == NEGATION_OPERATOR || currentState == ASSIGNMENT_OPERATOR)?EQUALS_COMPARISON_OPERATOR:currentState;
                 *tokenp++ = c;
                 filePos++;
-                break;
             }
             continueStateLoop = 0;
         }

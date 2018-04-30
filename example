@@ -6,11 +6,12 @@ int main(int a, int b) {
 		b = 4.5;
 		c = 4.1;
 	}
-	while (token == 4) {
+	while (token != 4) {
 		c = 4;
 	}
 
 	return a;
+	functionTest(4, 3, argTest);
 }
 
 int functionTest()
@@ -18,3 +19,5 @@ int functionTest()
 	a = 4 * 4 * 2 + 4 + 5;
 	return a;
 }
+
+int w, x, t, y;

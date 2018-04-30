@@ -3,6 +3,7 @@
 static Token* currentToken;
 static StackNode* stackTop;
 static Rule* rulesListHeader;
+static GenericSyntaxTreeNode* syntaxTreeHeader;
 
 void parse(FILE* fd)
 {
@@ -46,7 +47,8 @@ void parse(FILE* fd)
             break;
         }
     }
-    fprintf(stdout, "Valid input\n");
+    syntaxTreeHeader = pop(&stackTop);
+    printSyntaxTree();
 }
 
 void fileNotFoundError()
@@ -546,4 +548,82 @@ void syntaxError()
 {
     fprintf(stderr, "Syntax Error: Unexpected token: %s\n", currentToken->symbol);
     exit(1);
+}
+
+void printSyntaxTree()
+{
+    Program* program = syntaxTreeHeader->attr.program;
+    fprintf(stdout, "<Program>\n");
+
+    if (program->definitions->ruleType != EPSILON_RULE)
+        printDefinitions(program->definitions->attr.definitions);
+
+    fprintf(stdout, "</Program>\n");
+}
+
+void printDefinitions(Definitions* definitions)
+{
+    fprintf(stdout, "<Definitions>\n");
+
+    printDefinition(definitions->definition);
+    if (definitions->moreDefinitions->ruleType != EPSILON_RULE)
+        printDefinitions(definitions->moreDefinitions->attr.definitions);
+
+    fprintf(stdout, "</Definitions>\n");
+}
+
+void printDefinition(GenericSyntaxTreeNode* definition)
+{
+    int defType = definition->ruleType;
+    switch (defType)
+    {
+    case DEFINITION:
+        printVarDefinition(definition->attr.definition->defVar->attr.defVar);
+        break;
+    case DEFINITION_1:
+        printFunctionDefinition(definition->attr.definition_1->defFunc->attr.defFunc);
+    }
+}
+
+void printVarDefinition(DefVar* defVar)
+{
+    fprintf(stdout, "<DefVar>\n");
+    fprintf(stdout, "Data Type: %s\n", defVar->dataType->attr.simpleToken->symbol);
+    fprintf(stdout, "Identifier: %s\n", defVar->identifier->attr.simpleToken->symbol);
+
+    if (defVar->varList->ruleType != EPSILON_RULE)
+        printVarList(defVar->varList->attr.varList);
+
+    fprintf(stdout, "</DefVar>\n");
+}
+
+void printFunctionDefinition(DefFunc* defFunc)
+{
+    fprintf(stdout, "<DefFunc>\n");
+    fprintf(stdout, "Data Type:\n");
+    fprintf(stdout, "Identifier:\n");
+    printParams();
+    printfFunctionBlok();
+    fprintf(stdout, "</DefFunc>\n");
+}
+
+void printVarList(VarList* varList)
+{
+    fprintf(stdout, "<VarList>\n");
+    fprintf(stdout, "Identifier: %s\n", varList->identifier->attr.simpleToken->symbol);
+
+    if (varList->nextVar->ruleType != EPSILON_RULE)
+        printVarList(varList->nextVar->attr.varList);
+
+    fprintf(stdout, "</VarList>\n");
+}
+
+void printParams()
+{
+
+}
+
+void printfFunctionBlok()
+{
+
 }

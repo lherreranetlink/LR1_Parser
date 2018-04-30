@@ -18,4 +18,13 @@ void pushTokenIntoStack(Token* token, int goToState);
 void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parserTable[rows][columns]);
 void syntaxError();
 
+void printSyntaxTree();
+void printDefinitions(Definitions* definitions);
+void printDefinition(GenericSyntaxTreeNode* definition);
+void printVarDefinition(DefVar* defVar);
+void printFunctionDefinition(DefFunc* defFunc);
+void printVarList(VarList* varList);
+void printParams();
+void printfFunctionBlok();
+
 #endif // PARSER_H_INCLUDED

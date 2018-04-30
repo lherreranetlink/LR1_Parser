@@ -168,7 +168,7 @@
 	<stdlib.h>
 	"parser.h"
 
-1525038175 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
+1525061941 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
 	<string.h>
 	"grammar.h"
 	"lex.h"
@@ -190,6 +190,6 @@
 1525044791 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/rules.h
 	"token.h"
 
-1525047791 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.c
+1525061330 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.c
 	"parser.h"
 

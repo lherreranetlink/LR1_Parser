@@ -1,15 +1,31 @@
-int main()
-{
-	return 1;
+int a, b;
+float c, d;
+
+int main(int a, int b) {
+	if (a == 3) {
+		b = 4.5;
+		c = 4.1;
+	}
+	while (token != 4) {
+		c = 4;
+	}
+	int b, c, d;
+
+	functionTest(a, b);
+
+	return a + b;
 }
 
-int b(int a, int b)
+int functionTest(int a, int b)
 {
-
-}
-
-int c(){
 	int a, b, c;
- 	a = a + b;
+	a = 4 * 4 * 2 + 4 + 5;
+
+	if (a > 0)
+	{
+		b = 9;
+	}
+
 }
 
+int w, x, t, y;

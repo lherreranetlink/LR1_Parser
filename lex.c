@@ -69,7 +69,6 @@ Token* getTokenFromFile(FILE* fileToAnalyze)
                 currentState = (currentState == NEGATION_OPERATOR || currentState == ASSIGNMENT_OPERATOR)?EQUALS_COMPARISON_OPERATOR:currentState;
                 *tokenp++ = c;
                 filePos++;
-                break;
             }
             continueStateLoop = 0;
         }
@@ -195,10 +194,12 @@ Token* getTokenFromFile(FILE* fileToAnalyze)
     }
     setErrorIfExists(&currentState);
     *tokenp = '\0';
-    newToken = (Token*)malloc(sizeof(Token));
-    newToken->symbol = (char*)malloc(sizeof(token));
-    strcpy(newToken->symbol, token);
-    newToken->type = currentState;
+
+    if (currentState == ERROR_STATE)
+        lexicalError(token);
+
+    newToken = generateNewToken(token, currentState);
+
     if (newToken->type == IDENTIFIER)
         comprobeAndSetKeyWord(newToken);
 
@@ -275,6 +276,16 @@ void setErrorIfExists(int* state)
     }
 }
 
+Token* generateNewToken(char* symbol, TokenType type)
+{
+    Token* newToken = (Token*)malloc(sizeof(Token));
+    newToken->symbol = (char*)malloc(sizeof(symbol));
+    strcpy(newToken->symbol, symbol);
+    newToken->type = type;
+
+    return newToken;
+}
+
 void comprobeAndSetKeyWord(Token* token)
 {
     if (strcmp(token->symbol, "if") == 0)
@@ -291,5 +302,10 @@ void comprobeAndSetKeyWord(Token* token)
         token->type = DATA_TYPE;
     else if (strcmp(token->symbol, "void") == 0)
         token->type = DATA_TYPE;
+}
 
+void lexicalError(char* invalidSymbol)
+{
+    fprintf(stderr, "Lexical Error: Invalid Symbol %s\n", invalidSymbol);
+    exit(1);
 }

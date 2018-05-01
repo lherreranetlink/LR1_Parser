@@ -1,14 +1,14 @@
 #include "stack.h"
 
-int gettop(StackNode** top)
+GenericSyntaxTreeNode* gettop(StackNode** top)
 {
     if (*top != NULL)
         return (*top)->data;
 
-    return -1;
+    return NULL;
 }
 
-void push(StackNode** top, int data)
+void push(StackNode** top, GenericSyntaxTreeNode* data)
 {
     StackNode* newNode = (StackNode*)malloc(sizeof(StackNode));
     newNode->data = data;
@@ -25,22 +25,22 @@ void push(StackNode** top, int data)
     }
 }
 
-int pop(StackNode** top)
+GenericSyntaxTreeNode* pop(StackNode** top)
 {
     if (*top != NULL)
     {
-        int temp = (*top)->data;
+        GenericSyntaxTreeNode* temp = (*top)->data;
         *top = (*top)->prev;
         return temp;
     }
-    return -1;
+    return NULL;
 }
 
 void printStack(StackNode** top)
 {
-    StackNode* aux;
+    /*StackNode* aux;
     for (aux = *top; aux != NULL; aux = aux->prev)
         printf("%d\n", aux->data);
 
-    printf("\n");
+    printf("\n");*/
 }

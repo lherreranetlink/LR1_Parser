@@ -28,5 +28,7 @@ void myUngetchar(int c);
 void setStateByToken(char token, int* state);
 void setErrorIfExists(int* state);
 void comprobeAndSetKeyWord(Token* token);
+void lexicalError(char* invalidSymbol);
+Token* generateNewToken(char* symbol, TokenType type);
 
 #endif // LEX_H_INCLUDED

@@ -147,20 +147,20 @@
 
 1524930147 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/token.h
 
-1524938624 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.h
+1525538689 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.h
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"token.h"
 
-1523140789 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stringutils.h
+1525538609 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stringutils.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 
-1525048453 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.c
+1525538689 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/lex.c
 	"lex.h"
 
 1523128382 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/main.c
@@ -168,7 +168,7 @@
 	<stdlib.h>
 	"parser.h"
 
-1525109425 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
+1525584281 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.h
 	<string.h>
 	"grammar.h"
 	"lex.h"
@@ -176,20 +176,20 @@
 	"stack.h"
 	"rules.h"
 
-1524932318 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.h
+1525538689 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.h
 	<stdio.h>
 	<stdlib.h>
 	"rules.h"
 
-1524934640 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.c
+1525538689 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stack.c
 	"stack.h"
 
 1523208368 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/stringutils.c
 	"stringutils.h"
 
-1525044791 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/rules.h
+1525538689 /home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/rules.h
 	"token.h"
 
-1525109409 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.c
+1525585063 source:/home/leonardoho/Escritorio/CUCEI/Octavo_Semestre/Michelle_Franco/C-Parser/parser.c
 	"parser.h"
 

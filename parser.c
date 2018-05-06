@@ -574,6 +574,8 @@ void printDefinitions(Definitions* definitions)
 
 void printDefinition(GenericSyntaxTreeNode* definition)
 {
+    fprintf(stdout, "<Definition>\n");
+
     int defType = definition->ruleType;
     switch (defType)
     {
@@ -583,6 +585,8 @@ void printDefinition(GenericSyntaxTreeNode* definition)
     case DEFINITION_1:
         printFunctionDefinition(definition->attr.definition_1->defFunc->attr.defFunc);
     }
+
+    fprintf(stdout, "</Definition>\n");
 }
 
 void printVarDefinition(DefVar* defVar)
@@ -749,10 +753,12 @@ void printWhileStatement(Statement_2* whileStm)
 void printReturnStatement(Statement_3* returnStm)
 {
     fprintf(stdout, "<SentenciaReturn>\n");
+    fprintf(stdout, "<ValorRegresa>\n");
 
     if (returnStm->returnValue->ruleType != EPSILON_RULE)
         printExpression(returnStm->returnValue->attr.returnValue->expression);
 
+    fprintf(stdout, "</ValorRegresa>\n");
     fprintf(stdout, "</SentenciaReturn>\n");
 }
 

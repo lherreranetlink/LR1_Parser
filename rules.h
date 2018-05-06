@@ -206,7 +206,7 @@ typedef struct Expression_1
 
 typedef struct Expression_2
 {
-    struct GenericSyntaxTreeNode* multOperator;
+    struct GenericSyntaxTreeNode* notOperator;
     struct GenericSyntaxTreeNode* expression;
 } Expression_2;
 

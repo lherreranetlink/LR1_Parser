@@ -439,7 +439,7 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     {
         Expression_2* expression_2 = malloc(sizeof(Expression_2));
         expression_2->expression = pop(&stackTop);
-        expression_2->multOperator = pop(&stackTop);
+        expression_2->notOperator = pop(&stackTop);
 
         node->ruleType = EXPRESSION_2;
         node->attr.expression_2 = expression_2;
@@ -448,9 +448,9 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     case EXPRESSION_3:
     {
         Expression_3* expression_3 = malloc(sizeof(Expression_3));
-        expression_3->expressionLeft = pop(&stackTop);
-        expression_3->multOperator = pop(&stackTop);
         expression_3->expressionRight = pop(&stackTop);
+        expression_3->multOperator = pop(&stackTop);
+        expression_3->expressionLeft = pop(&stackTop);
 
         node->ruleType = EXPRESSION_3;
         node->attr.expression_3 = expression_3;
@@ -459,9 +459,9 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     case EXPRESSION_4:
     {
         Expression_4* expression_4 = malloc(sizeof(Expression_4));
-        expression_4->expressionLeft = pop(&stackTop);
-        expression_4->additionOperator = pop(&stackTop);
         expression_4->expressionRight = pop(&stackTop);
+        expression_4->additionOperator = pop(&stackTop);
+        expression_4->expressionLeft = pop(&stackTop);
 
         node->ruleType = EXPRESSION_4;
         node->attr.expression_4 = expression_4;
@@ -470,9 +470,9 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     case EXPRESSION_5:
     {
         Expression_5* expression_5 = malloc(sizeof(Expression_5));
-        expression_5->expressionLeft = pop(&stackTop);
-        expression_5->relationalOperator = pop(&stackTop);
         expression_5->expressionRight = pop(&stackTop);
+        expression_5->relationalOperator = pop(&stackTop);
+        expression_5->expressionLeft = pop(&stackTop);
 
         node->ruleType = EXPRESSION_5;
         node->attr.expression_5 = expression_5;
@@ -481,9 +481,9 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     case EXPRESSION_6:
     {
         Expression_6* expression_6 = malloc(sizeof(Expression_6));
-        expression_6->expressionLeft = pop(&stackTop);
-        expression_6->equalsComparisonOperator = pop(&stackTop);
         expression_6->expressionRight = pop(&stackTop);
+        expression_6->equalsComparisonOperator = pop(&stackTop);
+        expression_6->expressionLeft = pop(&stackTop);
 
         node->ruleType = EXPRESSION_6;
         node->attr.expression_6 = expression_6;
@@ -492,9 +492,9 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     case EXPRESSION_7:
     {
         Expression_7* expression_7 = malloc(sizeof(Expression_7));
-        expression_7->expressionLeft = pop(&stackTop);
-        expression_7->andOperator = pop(&stackTop);
         expression_7->expressionRight = pop(&stackTop);
+        expression_7->andOperator = pop(&stackTop);
+        expression_7->expressionLeft = pop(&stackTop);
 
         node->ruleType = EXPRESSION_7;
         node->attr.expression_7 = expression_7;
@@ -503,9 +503,9 @@ void buildSyntaxTreeNode(int rule, int rows, int columns, ParserTableCell parser
     case EXPRESSION_8:
     {
         Expression_8* expression_8 = malloc(sizeof(Expression_8));
-        expression_8->expressionLeft = pop(&stackTop);
-        expression_8->orOperator = pop(&stackTop);
         expression_8->expressionRight = pop(&stackTop);
+        expression_8->orOperator = pop(&stackTop);
+        expression_8->expressionLeft = pop(&stackTop);
 
         node->ruleType = EXPRESSION_8;
         node->attr.expression_8 = expression_8;
@@ -784,7 +784,7 @@ void printExpression(GenericSyntaxTreeNode* expression)
         printExpression(expression->attr.expression_1->expression);
         break;
     case EXPRESSION_2:
-        fprintf(stdout, "Sign: %s\n", expression->attr.expression_2->multOperator->attr.simpleToken->symbol);
+        fprintf(stdout, "Sign: %s\n", expression->attr.expression_2->notOperator->attr.simpleToken->symbol);
         printExpression(expression->attr.expression_2->expression);
         break;
     case EXPRESSION_3:

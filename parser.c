@@ -25,8 +25,7 @@ void parse(FILE* fd)
     ParserTableCell currentState;
     while (!parseFinish)
     {
-        int lala;
-        currentState = parserTable[lala = gettop(&stackTop)->stateToSee][currentTokenType = getNextSymbolType(fd)];
+        currentState = parserTable[gettop(&stackTop)->stateToSee][currentTokenType = getNextSymbolType(fd)];
 
         int transitionType = currentState.transitionType;
         switch (transitionType)

@@ -760,7 +760,7 @@ void printFunctionCallStatement(Statement_4* funcCallStm)
 {
     fprintf(stdout, "<LlamadaFuncion>\n");
 
-    fprintf(stdout, "Identifier: %p\n", funcCallStm->funcCall->attr.funcCall->identifier->attr.simpleToken->symbol);
+    fprintf(stdout, "Identifier: %s\n", funcCallStm->funcCall->attr.funcCall->identifier->attr.simpleToken->symbol);
     if (funcCallStm->funcCall->attr.funcCall->args->ruleType != EPSILON_RULE)
         printFunctionCallArgs(funcCallStm->funcCall->attr.funcCall->args->attr.args);
 
@@ -853,7 +853,7 @@ void printFunctionCallTerm(FuncCall* funcCall)
 {
     fprintf(stdout, "<LlamadaFuncion>\n");
 
-    fprintf(stdout, "Identifier: %p\n", funcCall->identifier->attr.simpleToken->symbol);
+    fprintf(stdout, "Identifier: %s\n", funcCall->identifier->attr.simpleToken->symbol);
     if (funcCall->args->ruleType != EPSILON_RULE)
         printFunctionCallArgs(funcCall->args->attr.args);
 

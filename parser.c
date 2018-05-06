@@ -25,7 +25,8 @@ void parse(FILE* fd)
     ParserTableCell currentState;
     while (!parseFinish)
     {
-        currentState = parserTable[gettop(&stackTop)->stateToSee][currentTokenType = getNextSymbolType(fd)];
+        int lala;
+        currentState = parserTable[lala = gettop(&stackTop)->stateToSee][currentTokenType = getNextSymbolType(fd)];
 
         int transitionType = currentState.transitionType;
         switch (transitionType)
@@ -760,7 +761,7 @@ void printFunctionCallStatement(Statement_4* funcCallStm)
 {
     fprintf(stdout, "<LlamadaFuncion>\n");
 
-    fprintf(stdout, "Identifier: %s\n", funcCallStm->funcCall->attr.funcCall->identifier->attr.simpleToken->symbol);
+    fprintf(stdout, "Identifier: %p\n", funcCallStm->funcCall->attr.funcCall->identifier->attr.simpleToken->symbol);
     if (funcCallStm->funcCall->attr.funcCall->args->ruleType != EPSILON_RULE)
         printFunctionCallArgs(funcCallStm->funcCall->attr.funcCall->args->attr.args);
 
@@ -775,9 +776,9 @@ void printExpression(GenericSyntaxTreeNode* expression)
     switch (ruleType)
     {
     case EXPRESSION:
-        fprintf(stdout, "(");
+        fprintf(stdout, "(\n");
         printExpression(expression->attr.expression->expression);
-        fprintf(stdout, ")");
+        fprintf(stdout, ")\n");
         break;
     case EXPRESSION_1:
         fprintf(stdout, "Sign: %s\n", expression->attr.expression_1->additionOperator->attr.simpleToken->symbol);
@@ -831,7 +832,7 @@ void printTerm(GenericSyntaxTreeNode* term)
     switch(ruleType)
     {
     case TERM:
-        printFunctionCallStatement(term->attr.term->funcCall->attr.statement_4);
+        printFunctionCallTerm(term->attr.term->funcCall->attr.funcCall);
         break;
     case TERM_1:
         fprintf(stdout, "%s\n", term->attr.term_1->identifier->attr.simpleToken->symbol);
@@ -847,6 +848,17 @@ void printTerm(GenericSyntaxTreeNode* term)
     }
 
     fprintf(stdout, "</Term>\n");
+}
+
+void printFunctionCallTerm(FuncCall* funcCall)
+{
+    fprintf(stdout, "<LlamadaFuncion>\n");
+
+    fprintf(stdout, "Identifier: %p\n", funcCall->identifier->attr.simpleToken->symbol);
+    if (funcCall->args->ruleType != EPSILON_RULE)
+        printFunctionCallArgs(funcCall->args->attr.args);
+
+    fprintf(stdout, "</LlamadaFuncion>\n");
 }
 
 void printBlockStatement(GenericSyntaxTreeNode* blockStm)

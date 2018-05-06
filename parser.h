@@ -37,6 +37,7 @@ void printReturnStatement(Statement_3* returnStm);
 void printFunctionCallStatement(Statement_4* funcCallStm);
 void printExpression(GenericSyntaxTreeNode* expression);
 void printTerm(GenericSyntaxTreeNode* term);
+void printFunctionCallTerm(FuncCall* funcCall);
 void printBlockStatement(GenericSyntaxTreeNode* blockStm);
 void printMultipleStatements(Statements* multipleStm);
 void printBlock(Block* block);
